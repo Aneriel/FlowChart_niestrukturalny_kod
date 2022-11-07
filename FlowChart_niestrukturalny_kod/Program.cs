@@ -12,7 +12,45 @@ namespace FlowChart
             int x = data[0];
             int y = data[1];
             int z = data[2];
-        
+            
+            for(; y>0&&x>0; x--, y--)
+            {
+                Console.Write("C");
+            }
+            
+            if (x > 0)
+            {
+
+            }
+            else
+            {
+                y=1;
+                Console.Write("E");
+                Console.Write("G");
+                Console.WriteLine();
+            }
+            if (y > 0)
+            {
+
+            }
+            else
+            {
+                Console.Write("D");
+                if (z > 0)
+                {
+                    Console.WriteLine();
+                }
+                else
+                {
+                    Console.Write("G");
+                    Console.WriteLine();
+                }
+            }
+            #if DEBUG
+            Console.WriteLine("By zakończyć emulacje naciśnij enter");
+            Console.ReadLine();
+            #endif
+
         }
     }
 }
